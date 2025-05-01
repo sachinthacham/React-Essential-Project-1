@@ -3,6 +3,7 @@ import CoreConcept from "./components/CoreConcept";
 import reactImage from "./assets/react-core-concepts.png";
 import TabButton from "./components/TabButton";
 import { useState } from "react";
+import { CORE_CONCEPTS } from "./data";
 
 function App() {
   const [content, setContent] = useState("dynamic text goes here");
@@ -16,28 +17,13 @@ function App() {
         <section id="core-concepts">
           <ul>
             <CoreConcept
-              img={reactImage}
+              image={reactImage}
               title="first title"
               description="first conmponot decscription"
             />
-
-            <CoreConcept
-              img={reactImage}
-              title="second title"
-              description="second conmponot decscription"
-            />
-
-            <CoreConcept
-              img={reactImage}
-              title="third title"
-              description="third conmponot decscription"
-            />
-
-            <CoreConcept
-              img={reactImage}
-              title="fourth title"
-              description="forth conmponot decscription"
-            />
+            <CoreConcept {...CORE_CONCEPTS[1]} />
+            <CoreConcept {...CORE_CONCEPTS[2]} />
+            <CoreConcept {...CORE_CONCEPTS[3]} />
           </ul>
         </section>
         <section id="examples">
